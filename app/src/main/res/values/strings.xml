@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Rajadingin Mobile</string>
+
+    <string name="rjd_lowercase_name" translatable="false">rajadingin</string>
+    <string name="the_all_in_one_food_shop" translatable="false">the all in one fresh &amp; frozen food shop</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Categories</string>
+    <string name="title_notifications">Cart</string>
+    <string name="title_profile">Profile</string>
+
+    <!--Activity Strings-->
+    <string name="str_login_sign_in">SIGN IN</string>
+    <string name="str_login_username">USERNAME</string>
+    <string name="str_login_password">PASSWORD</string>
+    <string name="str_login_btn_signin">S I G N  I N</string>
+    <string name="str_login_new_user">New user?</string>
+    <string name="str_login_sign_up">Sign Up</string>
+    <string name="str_register_nim">NIM</string>
+    <string name="str_register_nama">Nama</string>
+    <string name="str_register_password">Password</string>
+    <string name="str_register_ulangi_password">Ulangi Password</string>
+    <string name="str_register_sign_up">Sign Up</string>
+
+    <string name="by_signing_in_you_agreeing_to_our">By signing in you agreeing to our</string>
+
+    <string name="register" translatable="false">REGISTER</string>
+    <string name="login_email_hint" translatable="false">Email</string>
+    <string name="login_password_hint" translatable="false">Password</string>
+    <string name="signup_login_hint" translatable="false">Already have an account? Sign In</string>
+    <string name="login_signup_hint" translatable="false">Don\'t have an account? Sign Up</string>
+
+    <string name="jakarta">Jakarta</string>
+    <string name="bogor">Jakarta</string>
+    <string name="tangerang">Tangerang</string>
+    <string name="bekasi">Bekasi</string>
+
+    <string-array name="jabodetabek">
+        <item>@string/jakarta</item>
+        <item>@string/bogor</item>
+        <item>@string/tangerang</item>
+        <item>@string/bekasi</item>
+    </string-array>
+</resources>
