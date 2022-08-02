@@ -1,13 +1,9 @@
 package id.rajadingin.consumer.ui.activity.classes
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import id.rajadingin.consumer.databinding.ActivitySplashscreenBinding
-import id.rajadingin.consumer.model.Const
 import id.rajadingin.consumer.ui.activity.interfaces.SplashScreenContractInterface
 import id.rajadingin.consumer.ui.activity.presenter.SplashScreenPresenter
 import id.rajadingin.consumer.utils.SharedPreference

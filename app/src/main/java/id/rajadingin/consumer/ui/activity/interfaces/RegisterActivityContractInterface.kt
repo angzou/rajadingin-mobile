@@ -1,9 +1,15 @@
 package id.rajadingin.consumer.ui.activity.interfaces
 
+import id.rajadingin.consumer.model.responses.KecResponse
+import id.rajadingin.consumer.model.responses.KelResponse
+
 interface RegisterActivityContractInterface {
 
     interface View {
         fun initView()
+        fun initKecSpinner(listKecamatan: List<KecResponse>)
+        fun initKelSpinner(listKelurahan: List<KelResponse>)
+        fun navigateToMapsActivity()
     }
 
     interface Presenter {
@@ -22,6 +28,9 @@ interface RegisterActivityContractInterface {
             userLong: String,
             userLat: String
         )
+        fun loadKecamatan(prov: String, kab: String)
+        fun loadKelurahan(prov: String, kab: String, kec: String)
+
     }
 
 }

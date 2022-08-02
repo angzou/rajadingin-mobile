@@ -1,4 +1,4 @@
-package id.rajadingin.consumer.model
+package id.rajadingin.consumer.networking
 
 
 object Const {

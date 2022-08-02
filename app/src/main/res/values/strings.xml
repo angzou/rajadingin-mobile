@@ -29,15 +29,74 @@
     <string name="signup_login_hint" translatable="false">Already have an account? Sign In</string>
     <string name="login_signup_hint" translatable="false">Don\'t have an account? Sign Up</string>
 
-    <string name="jakarta">Jakarta</string>
-    <string name="bogor">Jakarta</string>
-    <string name="tangerang">Tangerang</string>
-    <string name="bekasi">Bekasi</string>
+    <string name="username_empty_prompt">Username is empty</string>
+    <string name="pwd_empty_prompt">Password is empty</string>
 
-    <string-array name="jabodetabek">
+    <string name="jakarta">DKI Jakarta</string>
+    <string name="jabar">Jawa Barat</string>
+    <string name="banten">Banten</string>
+    <string name="yogyakarta">DI Yogyakarta</string>
+    <string name="jateng">Jawa Tengah</string>
+
+    <string name="jakpus">Kota Jakarta Pusat</string>
+    <string name="jakbar">Kota Jakarta Barat</string>
+    <string name="jaksel">Kota Jakarta Selatan</string>
+    <string name="jaktim">Kota Jakarta Timur</string>
+    <string name="jakut">Kota Jakarta Utara</string>
+
+    <string name="kabBekasi">Bekasi</string>
+    <string name="kotaBekasi">Kota Bekasi</string>
+    <string name="kabBogor">Bogor</string>
+    <string name="kotaBogor">Kota Bogor</string>
+
+    <string name="kotaTangerang">Kota Tangerang</string>
+
+    <string name="bantul">Bantul</string>
+    <string name="gunungKidul">Gunung Kidul</string>
+    <string name="kotaYogya">Kota Yogyakarta</string>
+    <string name="kulonProgo">Kulon Progo</string>
+    <string name="sleman">Sleman</string>
+
+    <string name="wonogiri">Wonogiri</string>
+
+    <string-array name="province">
         <item>@string/jakarta</item>
-        <item>@string/bogor</item>
-        <item>@string/tangerang</item>
-        <item>@string/bekasi</item>
+        <item>@string/jabar</item>
+        <item>@string/banten</item>
+        <item>@string/yogyakarta</item>
+        <item>@string/jateng</item>
     </string-array>
+
+    <string-array name="kabkotaJakarta">
+        <item>@string/jakpus</item>
+        <item>@string/jakbar</item>
+        <item>@string/jaksel</item>
+        <item>@string/jaktim</item>
+        <item>@string/jakut</item>
+    </string-array>
+
+    <string-array name="kabkotaJabar">
+        <item>@string/kabBekasi</item>
+        <item>@string/kotaBekasi</item>
+        <item>@string/kabBogor</item>
+        <item>@string/kotaBogor</item>
+    </string-array>
+
+    <string-array name="kabkotaBanten">
+        <item>@string/kotaTangerang</item>
+    </string-array>
+
+    <string-array name="kabkotaYogya">
+        <item>@string/bantul</item>
+        <item>@string/gunungKidul</item>
+        <item>@string/kotaYogya</item>
+        <item>@string/kulonProgo</item>
+        <item>@string/sleman</item>
+    </string-array>
+
+    <string-array name="kabkotaJateng">
+        <item>@string/wonogiri</item>
+    </string-array>
+    <string name="title_activity_maps">MapsActivity</string>
+
 </resources>

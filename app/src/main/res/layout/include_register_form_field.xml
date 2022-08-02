@@ -65,7 +65,7 @@
         style="@style/parent"
         android:layout_marginTop="@dimen/loginViewsMargin"
         app:endIconDrawable="@drawable/ic_pwd_icon"
-        app:endIconMode="custom">
+        app:endIconMode="password_toggle">
 
         <EditText
             android:id="@+id/editTextPassword"
@@ -82,7 +82,7 @@
         style="@style/parent"
         android:layout_marginTop="@dimen/loginViewsMargin"
         app:endIconDrawable="@drawable/ic_pwd_icon"
-        app:endIconMode="custom">
+        app:endIconMode="password_toggle">
 
         <EditText
             android:id="@+id/editTextRePassword"
@@ -110,7 +110,127 @@
             android:importantForAutofill="no" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:text="Provinsi"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"
+                android:layout_weight="4"/>
+
+            <Spinner
+                android:id="@+id/spinnerProvince"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="6"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:text="Kabupaten/Kota"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"
+                android:layout_weight="4"/>
+
+            <Spinner
+                android:id="@+id/spinnerKabupaten"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="6"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:text="Kecamatan"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"
+                android:layout_weight="4"/>
+
+            <Spinner
+                android:id="@+id/spinnerKecamatan"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="6"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:text="Kelurahan"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"
+                android:layout_weight="4"/>
+
+            <Spinner
+                android:id="@+id/spinnerKelurahan"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="6"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="-4dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="-4dp"
+        android:background="@drawable/btn_rounded_primary"
+        android:text="MAP"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnRegister"

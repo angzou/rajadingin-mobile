@@ -2,7 +2,7 @@ package id.rajadingin.consumer.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import id.rajadingin.consumer.model.Const
+import id.rajadingin.consumer.networking.Const
 
 class SharedPreference(context: Context) {
     val PREFS_NAME = Const.PREF_NAME

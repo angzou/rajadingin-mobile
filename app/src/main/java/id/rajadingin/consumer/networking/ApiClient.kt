@@ -1,6 +1,5 @@
 package id.rajadingin.consumer.networking
 
-import id.rajadingin.consumer.model.Const
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

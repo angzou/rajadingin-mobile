@@ -6,13 +6,12 @@ import android.os.Bundle
 import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import id.rajadingin.consumer.R
-import id.rajadingin.consumer.model.Const
+import id.rajadingin.consumer.networking.Const
 import id.rajadingin.consumer.databinding.ActivityLoginCardBinding
 import id.rajadingin.consumer.ui.activity.interfaces.LoginActivityContractInterface
 import id.rajadingin.consumer.ui.activity.presenter.LoginActivityPresenter
@@ -70,23 +69,15 @@ class LoginActivity : AppCompatActivity(), LoginActivityContractInterface.View {
     override fun emptyCheck() {
         val usernameContent = binding.TFUsername.text.toString()
         val passContent = binding.TFPassword.text.toString()
-
-        if (usernameContent.isEmpty() || passContent.isEmpty()) {
-//            Tools.closePopupProgressSpinner()
-            showLoginToast(Const.PROMPT_FIELD_KOSONG)
-        } else {
-            presenter?.loginTap(
-                usernameContent,
-                passContent
-            )
-        }
-
+        if (usernameContent.isEmpty()) binding.TFUsername.error = getString(R.string.username_empty_prompt)
+        else if (passContent.isEmpty()) binding.TFPassword.error = getString(R.string.pwd_empty_prompt)
+        else presenter?.loginTap(usernameContent, passContent)
     }
 
     override val nimTextwatcher = object : TextWatcher {
 
         override fun afterTextChanged(s: Editable?) {
-//            val content = binding.TFUsername.text.toString()
+            val content = binding.TFUsername.text.toString()
 //            binding.TFUsername.error = if (content.length != 13 && content.isNotEmpty()) null else "Minimal 12 digit "
         }
 

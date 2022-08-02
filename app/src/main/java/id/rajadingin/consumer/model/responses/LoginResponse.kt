@@ -1,8 +1,8 @@
-package id.rajadingin.consumer.model
+package id.rajadingin.consumer.model.responses
 
 import com.google.gson.annotations.SerializedName
 
-data class LoginRoot (
+data class LoginResponse (
 
     @field:SerializedName("status")
     val status: String? = null,
