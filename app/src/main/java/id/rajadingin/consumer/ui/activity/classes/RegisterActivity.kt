@@ -3,10 +3,13 @@ package id.rajadingin.consumer.ui.activity.classes
 import android.Manifest
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.innfinity.permissionflow.lib.requestEachPermissions
@@ -45,8 +48,8 @@ class RegisterActivity : AppCompatActivity(), RegisterActivityContractInterface.
 
     override fun initView() {
         initProvinceSpinner()
+//        binding.registrationFormField.editTextRePassword.addTextChangedListener(pwdTextwatcher)
         binding.registrationFormField.btnMap.setOnClickListener{
-
             CoroutineScope(Dispatchers.Main).launch {
                 // just call requestPermission and pass in all required permissions
                 requestPermissions(Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION)
@@ -61,7 +64,24 @@ class RegisterActivity : AppCompatActivity(), RegisterActivityContractInterface.
                         }
                     }
             }
+        }
 
+        binding.registrationFormField.btnRegister.setOnClickListener{
+            presenter?.regis(
+                binding.registrationFormField.editTextName.text.toString(),
+                binding.registrationFormField.editTextEmail.text.toString(),
+                binding.registrationFormField.editTextUsername.text.toString(),
+                binding.registrationFormField.editTextMobile.text.toString(),
+                binding.registrationFormField.editTextAddress.text.toString(),
+                binding.registrationFormField.spinnerProvince.selectedItem.toString(),
+                binding.registrationFormField.spinnerKabupaten.selectedItem.toString(),
+                binding.registrationFormField.spinnerKecamatan.selectedItem.toString(),
+                binding.registrationFormField.spinnerKelurahan.selectedItem.toString(),
+                "17222",
+                        binding.registrationFormField.editTextRePassword.text.toString(),
+                "178623",
+                "-1738"
+            )
 
         }
     }
@@ -187,6 +207,29 @@ class RegisterActivity : AppCompatActivity(), RegisterActivityContractInterface.
     override fun navigateToMapsActivity() {
         val intent = Intent(this, MapsActivity::class.java)
         startActivity(intent)
+    }
+
+    override fun showRegisterToast(message: String) {
+//        Tools.closePopupProgressSpinner()
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    override val pwdTextwatcher = object : TextWatcher {
+
+        override fun afterTextChanged(s: Editable?) {
+            val content = binding.registrationFormField.editTextRePassword.text.toString()
+            if (content != binding.registrationFormField.editTextPassword.text.toString()) binding.registrationFormField.editTextRePassword.error = "Password tidak sesuai"
+        }
+
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+        }
+
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+        }
+
+
     }
 
 }

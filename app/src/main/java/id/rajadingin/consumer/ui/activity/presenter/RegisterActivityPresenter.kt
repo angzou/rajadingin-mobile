@@ -66,20 +66,19 @@ class RegisterActivityPresenter(_view: View) : Presenter {
 
                 when (responseCode.toString()) {
                     Const.RESPONSE_201 -> {
-//                view.showLoginToast(Const.PROMPT_WRONGUSERNAME_WRONGPASSWORD)
+                        view.showRegisterToast(results?.msg.toString())
                     }
                     Const.RESPONSE_204 -> {
-//                view.showLoginToast(Const.PROMPT_WRONGUSERNAME_WRONGPASSWORD)
+                        view.showRegisterToast(results?.msg.toString())
                     }
                     Const.RESPONSE_405 -> {
-//                view.showLoginToast(Const.PROMPT_WRONGUSERNAME_WRONGPASSWORD)
+                        view.showRegisterToast(results?.msg.toString())
+                    }
+                    Const.RESPONSE_500 -> {
+                        view.showRegisterToast(Const.PROMPT_FILL)
                     }
                     Const.RESPONSE_200 -> {
-//                view.showLoginToast(Const.PROMPT_WELCOME)
-//                Log.v("CALL STATUS :: ", results?.status.toString())
-//                Log.v("USERNAME :: ", results?.username.toString())
-//                Log.v("ROLE :: ", results?.role.toString())
-//                Log.v("TOKEN :: ", results?.token.toString())
+                        view.showRegisterToast(results?.msg.toString())
                     }
                 }
 

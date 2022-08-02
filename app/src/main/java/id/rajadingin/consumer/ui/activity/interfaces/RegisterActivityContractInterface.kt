@@ -1,5 +1,6 @@
 package id.rajadingin.consumer.ui.activity.interfaces
 
+import android.text.TextWatcher
 import id.rajadingin.consumer.model.responses.KecResponse
 import id.rajadingin.consumer.model.responses.KelResponse
 
@@ -10,6 +11,8 @@ interface RegisterActivityContractInterface {
         fun initKecSpinner(listKecamatan: List<KecResponse>)
         fun initKelSpinner(listKelurahan: List<KelResponse>)
         fun navigateToMapsActivity()
+        fun showRegisterToast(message: String)
+        val pwdTextwatcher: TextWatcher
     }
 
     interface Presenter {

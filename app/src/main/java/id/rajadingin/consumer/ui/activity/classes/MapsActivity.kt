@@ -138,5 +138,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         )
     }
 
+    @Override
+    override fun onBackPressed(){
+        this.finishAffinity()
+    }
 
 }

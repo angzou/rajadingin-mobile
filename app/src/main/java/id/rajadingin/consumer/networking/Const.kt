@@ -40,6 +40,7 @@ object Const {
     const val PROMPT_SIGNOUT_SUCCESSFULY ="Anda telah berhasil signout"
     const val PROMPT_WRONGUSERNAME_WRONGPASSWORD ="Username atau password salah"
     const val PROMPT_WELCOME ="WELCOME"
+    const val PROMPT_FILL ="Mohon isi form registrasi dengan benar"
 
     const val CALLBACK_STATUS = "STATUS"
     const val CALLBACK_MESSAGE = "MESSAGE"
